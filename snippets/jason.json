@@ -1,0 +1,28 @@
+{
+    "Define a Belief": {
+      "prefix": "bel",
+      "body": ["+!${1:goal} : ${2:condition} <- ${3:action}."],
+      "description": "Define a belief goal"
+    },
+    "Move Action": {
+      "prefix": "move",
+      "body": ["move(${1:north|south|east|west})"],
+      "description": "Move agent in a specified direction"
+    },
+    "Attach Action": {
+      "prefix": "attach",
+      "body": ["attach(${1:north|south|east|west})"],
+      "description": "Attach an item"
+    },
+    "Detach Action": {
+      "prefix": "detach",
+      "body": ["detach(${1:north|south|east|west})"],
+      "description": "Detach an item"
+    },
+    "Task Submission": {
+      "prefix": "submit",
+      "body": ["submit(${1:task_name})."],
+      "description": "Submit a task"
+    }
+  }
+  

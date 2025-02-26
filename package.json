@@ -1,0 +1,78 @@
+{
+  "name": "jason",
+  "displayName": "jason-language-support",
+  "description": "Jason multi-agent programming language support for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "jason",
+        "aliases": [
+          "jason",
+          "jason"
+        ],
+        "extensions": [
+          ".asl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "completionProvider": {
+      "triggerCharacters": [
+        ".",
+        " "
+      ],
+      "provideCompletionItems": true
+    },
+    "grammars": [
+      {
+        "language": "jason",
+        "scopeName": "source.jason",
+        "path": "./syntaxes/jason.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "jason",
+        "path": "./snippets/jason.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "jason.runSimulation",
+        "title": "Run Jason Simulation"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jason.runSimulation",
+        "key": "ctrl+alt+r",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:jason",
+    "onCommand:jason.runSimulation"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "build": "npm run compile",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "jason": "file:"
+  }
+}

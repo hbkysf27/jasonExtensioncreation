@@ -1,28 +1,142 @@
 {
-    "Define a Belief": {
-      "prefix": "bel",
-      "body": ["+!${1:goal} : ${2:condition} <- ${3:action}."],
-      "description": "Define a belief goal"
-    },
-    "Move Action": {
-      "prefix": "move",
-      "body": ["move(${1:north|south|east|west})"],
-      "description": "Move agent in a specified direction"
-    },
-    "Attach Action": {
-      "prefix": "attach",
-      "body": ["attach(${1:north|south|east|west})"],
-      "description": "Attach an item"
-    },
-    "Detach Action": {
-      "prefix": "detach",
-      "body": ["detach(${1:north|south|east|west})"],
-      "description": "Detach an item"
-    },
-    "Task Submission": {
-      "prefix": "submit",
-      "body": ["submit(${1:task_name})."],
-      "description": "Submit a task"
-    }
+  "Define a Belief": {
+    "prefix": "bel",
+    "body": ["+!${1:goal} : ${2:condition} <- ${3:action}."],
+    "description": "Define a belief goal"
+  },
+  "Move Action": {
+    "prefix": "move",
+    "body": ["move(${1:north|south|east|west})"],
+    "description": "Move agent in a specified direction"
+  },
+  "Attach Action": {
+    "prefix": "attach",
+    "body": ["attach(${1:north|south|east|west})"],
+    "description": "Attach an item"
+  },
+  "Detach Action": {
+    "prefix": "detach",
+    "body": ["detach(${1:north|south|east|west})"],
+    "description": "Detach an item"
+  },
+  "Task Submission": {
+    "prefix": "submit",
+    "body": ["submit(${1:task_name})."],
+    "description": "Submit a task"
+  },
+  "Send Message": {
+    "prefix": "send",
+    "body": [".send(${1:receiver}, ${2:performative}, ${3:message})."],
+    "description": "Send a message to another agent"
+  },
+  "Declare Belief": {
+    "prefix": "belief",
+    "body": [".belief(${1:fact})."],
+    "description": "Declare a belief"
+  },
+  "Drop Belief": {
+    "prefix": "drop_belief",
+    "body": [".abolish(${1:fact})."],
+    "description": "Drop a belief"
+  },
+  "Create an Agent": {
+    "prefix": "create_agent",
+    "body": [".create_agent(${1:agent_name}, ${2:source})."],
+    "description": "Create a new Jason agent"
+  },
+  "Kill an Agent": {
+    "prefix": "kill_agent",
+    "body": [".kill_agent(${1:agent_name})."],
+    "description": "Kill a Jason agent"
+  },
+  "Drop Intention": {
+    "prefix": "drop_intention",
+    "body": [".drop_intention(${1:intention})."],
+    "description": "Remove an agent's intention"
+  },
+  "Drop Desire": {
+    "prefix": "drop_desire",
+    "body": [".drop_desire(${1:desire})."],
+    "description": "Remove an agent's desire"
+  },
+  "Succeed Goal": {
+    "prefix": "succeed_goal",
+    "body": [".succeed_goal(${1:goal})."],
+    "description": "Mark a goal as successfully completed"
+  },
+  "Fail Goal": {
+    "prefix": "fail_goal",
+    "body": [".fail_goal(${1:goal})."],
+    "description": "Abort a goal with failure"
+  },
+  "Evaluate Expression": {
+    "prefix": "eval",
+    "body": [".eval(${1:expression}, ${2:result})."],
+    "description": "Evaluate a logical expression"
+  },
+  "Create a Set": {
+    "prefix": "create_set",
+    "body": [".set.create(${1:S})."],
+    "description": "Create an empty set"
+  },
+  "Add to Set": {
+    "prefix": "add_to_set",
+    "body": [".set.add(${1:S}, ${2:element})."],
+    "description": "Add an element to a set"
+  },
+  "Remove from Set": {
+    "prefix": "remove_from_set",
+    "body": [".set.remove(${1:S}, ${2:element})."],
+    "description": "Remove an element from a set"
+  },
+  "Union of Sets": {
+    "prefix": "union_sets",
+    "body": [".set.union(${1:Set1}, ${2:Set2})."],
+    "description": "Perform union of two sets"
+  },
+  "Intersection of Sets": {
+    "prefix": "intersect_sets",
+    "body": [".set.intersection(${1:Set1}, ${2:Set2})."],
+    "description": "Perform intersection of two sets"
+  },
+  "Create a Queue": {
+    "prefix": "create_queue",
+    "body": [".queue.create(${1:Q})."],
+    "description": "Create an empty queue"
+  },
+  "Add to Queue": {
+    "prefix": "add_to_queue",
+    "body": [".queue.add(${1:Q}, ${2:element})."],
+    "description": "Add an element to a queue"
+  },
+  "Remove from Queue": {
+    "prefix": "remove_from_queue",
+    "body": [".queue.remove(${1:Q}, ${2:element})."],
+    "description": "Remove an element from a queue"
+  },
+  "Print a Message": {
+    "prefix": "print",
+    "body": [".print(${1:message})."],
+    "description": "Print a message to the console"
+  },
+  "Formatted Print": {
+    "prefix": "printf",
+    "body": [".printf(${1:format}, ${2:values})."],
+    "description": "Print formatted output"
+  },
+  "Get Current Time": {
+    "prefix": "time",
+    "body": [".time(${1:hours}, ${2:minutes}, ${3:seconds}, ${4:milliseconds})."],
+    "description": "Get the current time"
+  },
+  "Get Current Date": {
+    "prefix": "date",
+    "body": [".date(${1:year}, ${2:month}, ${3:day})."],
+    "description": "Get the current date"
+  },
+  "Generate Random Number": {
+    "prefix": "random",
+    "body": [".random(${1:max_value})."],
+    "description": "Generate a random number"
   }
-  
+}

@@ -1,56 +1,69 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "jason",
+	"scopeName": "source.jason",
+	"fileTypes": ["asl"],
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#functions"
-		}
+	  {
+		"include": "#keywords"
+	  },
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#comments"
+	  },
+	  {
+		"include": "#internal_actions"
+	  },
+	  {
+		"include": "#functions"
+	  }
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.jason",
-					"match": "\\b(bel|desire|goal|plan|action|percept|if|while|for|return)\\b"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.jason",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.jason",
-					"match": "\\\\."
-				}
-			]
-		},
-		"comments": {
-			"patterns": [
-				{
-					"name": "comment.line.jason",
-					"match": "//.*$"
-				}
-			]
-		},
-		"functions": {
-			"patterns": [
-				{
-					"name": "entity.name.function.jason",
-					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\()"
-				}
-			]
-		}
-	},
-	"scopeName": "source.jason"
-}
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.jason",
+			"match": "\\b(bel|desire|goal|plan|action|percept|if|while|for|return)\\b"
+		  }
+		]
+	  },
+	  "strings": {
+		"name": "string.quoted.double.jason",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.jason",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "comments": {
+		"patterns": [
+		  {
+			"name": "comment.line.jason",
+			"match": "//.*$"
+		  }
+		]
+	  },
+	  "internal_actions": {
+		"patterns": [
+		  {
+			"name": "support.function.jason",
+			"match": "\\b(send|belief|intend|fail_goal|succeed_goal|drop_desire|drop_intention|add_plan|remove_plan)\\b"
+		  }
+		]
+	  },
+	  "functions": {
+		"patterns": [
+		  {
+			"name": "entity.name.function.jason",
+			"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\()"
+		  }
+		]
+	  }
+	}
+  }
+  
